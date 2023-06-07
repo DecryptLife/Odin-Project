@@ -1,0 +1,131 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  width: 100vw;
+  height: 100vh;
+}
+.container {
+  display: grid;
+  height: 100vh;
+  margin: 8px;
+  grid-template-rows: 1fr 1fr 5fr 1fr;
+  grid-template-columns: 1fr 4fr;
+  gap: 4px;
+  grid-template-areas:
+    "header header header header"
+    "sidebar nav nav nav"
+    "sidebar article article article"
+    "footer footer footer footer";
+}
+
+#header {
+  background: #393f4d;
+  grid-area: header;
+}
+
+#sidebar {
+  background: #ff7755;
+  grid-area: sidebar;
+}
+
+#nav {
+  background: #ff7755;
+  grid-area: nav;
+}
+
+#article {
+  background-color: #bccbde;
+  grid-area: article;
+}
+
+#footer {
+  background: darkslategray;
+  grid-area: footer;
+}
+
+.container > div {
+  text-align: center;
+  color: white;
+  padding: 15px;
+  font-weight: bold;
+  border-radius: 8px;
+  font-size: 32px;
+  font-family: Helvetica;
+}
+
+ul,
+li {
+  list-style-type: none;
+}
+
+.header {
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+}
+
+.menu > ul {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.logo {
+  justify-self: start;
+}
+
+.menu {
+  font-size: 18px;
+  align-self: center;
+}
+
+.nav ul {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.nav li {
+  font-size: 16px;
+}
+
+.sidebar {
+  display: grid;
+  gap: 50px;
+}
+
+.sidebar > .photo {
+  background: white;
+  color: black;
+  font-size: 16px;
+  border-radius: 10px;
+}
+
+.sidebar > .side-content {
+  background: white;
+  color: black;
+  font-size: 16px;
+  border-radius: 10px;
+}
+
+.article {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 4px;
+}
+
+.article > .card {
+  background: white;
+  height: 200px;
+}
+
+.card > p {
+  color: black;
+  font-size: 18px;
+  padding: 5px;
+}
+
+.title {
+  font-size: 24px;
+}
