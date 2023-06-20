@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../Library/main.css" type="text/css" />
+    <script src="../Library/library.js"></script>
+    <title>Library</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <h2>HIDDEN TREASURES</h2>
+      </div>
+      <div class="library">
+        <div class="books">
+          <div class="grid_container"></div>
+        </div>
+        <div class="empty_card" id="empty_lib">
+          <div class="empty_card_text">
+            <span
+              >Looks like you're yet to discover the treasures of the
+              world</span
+            >
+          </div>
+          <button class="empty_card_btn">Add a Book</button>
+        </div>
+
+        <a href="#" class="add-btn" onclick="openModal()">+</a>
+      </div>
+    </div>
+    <div class="model-overlay" id="addBook">
+      <div class="modal-content">
+        <span class="modal-close" onclick="closeModal()">&times;</span>
+        <form class="modal-form">
+          <input type="text" placeholder="Book Title" />
+          <input type="text" placeholder="Author" />
+          <input type="number" placeholder="# of Pages" />
+          <div>
+            <span>Have you read it yet?</span>
+            <input
+            type="checkbox"
+            id="book_read"
+            value="false"></input>
+          </div>
+
+          <input type="submit" value="Add Book"></input>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>

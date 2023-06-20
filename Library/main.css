@@ -1,0 +1,115 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+html,
+body {
+  width: 100vw;
+  height: 100vh;
+}
+
+.container {
+  height: 100vh;
+  display: grid;
+  grid-template-rows: 1fr 4fr;
+}
+
+.header {
+  align-self: center;
+  text-align: center;
+}
+
+.library {
+  background: #eeeeee;
+  display: grid;
+}
+
+.library > .empty_card {
+  height: 30%;
+  width: 40%;
+  justify-self: center;
+  align-self: center;
+  display: flex;
+  flex-direction: column;
+  background: white;
+  justify-content: center;
+  display: none;
+  padding: 32px;
+}
+
+.empty_card_text {
+}
+
+.empty_card_btn {
+  color: white;
+  background-color: #24a0ed;
+  height: 32px;
+}
+
+.books {
+  /* display: none; */
+}
+
+.grid_container {
+  display: grid;
+}
+
+.add-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 60px;
+  height: 60px;
+  background-color: #24a0ed;
+  color: #ffffff;
+  border-radius: 50%;
+  font-size: 40px;
+  text-align: center;
+  line-height: 60px;
+  text-decoration: none;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+}
+
+.model-overlay {
+  position: fixed;
+  height: 100%;
+  top: 0;
+  width: 100%;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 5px;
+  display: flex;
+  text-align: center;
+  width: 300px;
+  margin: auto;
+}
+
+.modal-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+}
+
+.modal-form > input {
+  height: 32px;
+  border-radius: 5px;
+  padding-left: 8px;
+}
+
+.modal-close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: large;
+  cursor: pointer;
+}
